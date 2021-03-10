@@ -1,0 +1,35 @@
+.container{    
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.map{ 
+    padding: 0;
+    margin: 0;
+    width: 960px;
+    height: 500px;
+    transform: scale(1) 
+}
+@media only screen and (max-width: 1000px) {
+    .container{ transform: scale(0.75) }
+}
+@media only screen and (max-width: 700px) {
+    .container{ transform: scale(0.5) }
+}
+
+@media only screen and (max-width: 500px) {
+    .container{ transform: scale(0.4) }
+
+}
+
+.marks .sphere {
+    fill: #f5f4f4;
+}
+.marks .interiors {
+    fill: none;
+    stroke: 3px solid #ececec;
+}
+.marks .graticules {
+    fill: none;
+    stroke: #dadada;
+}
