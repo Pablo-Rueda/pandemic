@@ -14,8 +14,8 @@ const Chart = ({data,country}) => {
                         label: "People",
                         backgroundColor: [
                             "rgba(0,0,255, 0.5)",
-                            "rgba(0,255,0, 0.5)",
-                            "rgba(255,0,0, 0.5)"
+                            "rgba(111, 194, 107, 0.5)",
+                            "rgba(186, 54, 54, 0.5)"
                         ],
                         data: [data.All.confirmed, data.All.recovered, data.All.deaths]
                     }]

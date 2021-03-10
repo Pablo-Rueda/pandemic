@@ -15,7 +15,7 @@ const Cards = (props) => {
             <Grid container spacing={0} justify="center">
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.infected)}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom> Infected</Typography>
+                        <Typography color="textSecondary" gutterBottom> {(country===undefined?"Global":country)} Infected</Typography>
                         <Typography variant="h5"> 
                         
                             <CountUp 
@@ -26,7 +26,6 @@ const Cards = (props) => {
                             />
                         
                         </Typography>
-                        <Typography color="textSecondary"> {(country===undefined?"Global":country)}  CoVid </Typography>
                         <Typography variant="body2"> 
                             Infected: {(Math.round(confirmed/population*100)===0?"Less than 1":Math.round(confirmed/population*100))}
                             % of the {country} population
@@ -36,7 +35,7 @@ const Cards = (props) => {
 
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.recovered)}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom> Recovered</Typography>
+                        <Typography color="textSecondary" gutterBottom> {(country===undefined?"Global":country)} Recovered</Typography>
                         <Typography variant="h5">
                         
                             <CountUp 
@@ -47,7 +46,6 @@ const Cards = (props) => {
                             />
                         
                         </Typography>
-                        <Typography color="textSecondary"> {(country===undefined?"Global":country)}  CoVid </Typography>
                         <Typography variant="body2">
                             Confirmed recoveries: {((Math.round(recovered/confirmed*100)===0)?("Less than 1"):(Math.round(recovered/confirmed*100)))}
                             % of the cases
@@ -57,7 +55,7 @@ const Cards = (props) => {
 
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom> Deaths</Typography>
+                        <Typography color="textSecondary" gutterBottom> {(country===undefined?"Global":country)} Deaths</Typography>
                         <Typography variant="h5">
 
                             <CountUp 
@@ -68,7 +66,6 @@ const Cards = (props) => {
                             />
 
                         </Typography>
-                        <Typography color="textSecondary"> {(country===undefined?"Global":country)}  CoVid </Typography>
                         <Typography variant="body2">
                             Death ratio: {((Math.round(deaths/confirmed*100)===0)?"Less than 1": (Math.round(deaths/confirmed*100)))}
                                 % of the cases
